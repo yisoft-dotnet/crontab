@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B7A6F3B1-5A1F-481F-AF8D-E27BF73D5A49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{506B9CDF-EED7-4D70-9B61-F07DDDB55D2C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		License.txt = License.txt
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yisoft.Crontab", "src\Yisoft.Crontab\Yisoft.Crontab.csproj", "{476A1529-5AF8-4D12-BBDF-396BDD2D0651}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C698C263-3412-4F65-8CF9-98CF9B31F0F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yisoft.Crontab.UnitTests", "test\Yisoft.Crontab.UnitTests\Yisoft.Crontab.UnitTests.csproj", "{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{476A1529-5AF8-4D12-BBDF-396BDD2D0651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476A1529-5AF8-4D12-BBDF-396BDD2D0651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476A1529-5AF8-4D12-BBDF-396BDD2D0651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476A1529-5AF8-4D12-BBDF-396BDD2D0651}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{476A1529-5AF8-4D12-BBDF-396BDD2D0651} = {B7A6F3B1-5A1F-481F-AF8D-E27BF73D5A49}
+		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F} = {C698C263-3412-4F65-8CF9-98CF9B31F0F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_ResXSortingComparison = InvariantCultureIgnoreCase
+		RESX_SortFileContentOnSave = True
+	EndGlobalSection
+EndGlobal

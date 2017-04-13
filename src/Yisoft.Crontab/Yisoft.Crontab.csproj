@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>cron expression parser for dotnet core.</Description>
+    <Copyright>Copyright © Yi.TEAM. All rights reserved.</Copyright>
+    <AssemblyTitle>Yisoft.Crontab</AssemblyTitle>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <Authors>ymind.chan@yi.team</Authors>
+    <TargetFrameworks>netstandard1.6;net46;net451;net45;net40</TargetFrameworks>
+    <AssemblyName>Yisoft.Crontab</AssemblyName>
+    <PackageId>Yisoft.Crontab</PackageId>
+    <PackageTags>dotnet;crontab;cron;schedule;yisoft;yiteam</PackageTags>
+    <PackageIconUrl>https://yi.team/images/yiteam-logo-64x64.png</PackageIconUrl>
+    <PackageProjectUrl>https://yi.team/</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/yisoft/crontab/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/yisoft/crontab</RepositoryUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+  </PropertyGroup>
+
+</Project>
