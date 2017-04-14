@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{506B9CDF-EED7-4D70-9B61-F07DDDB55D2C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		License.txt = License.txt
+		LICENSE = LICENSE
 		NuGet.Config = NuGet.Config
 		README.md = README.md
 	EndProjectSection
@@ -42,8 +42,8 @@ Global
 		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F} = {C698C263-3412-4F65-8CF9-98CF9B31F0F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_AutoCreateNewLanguageFiles = True
-		RESX_ResXSortingComparison = InvariantCultureIgnoreCase
 		RESX_SortFileContentOnSave = True
+		RESX_ResXSortingComparison = InvariantCultureIgnoreCase
+		RESX_AutoCreateNewLanguageFiles = True
 	EndGlobalSection
 EndGlobal

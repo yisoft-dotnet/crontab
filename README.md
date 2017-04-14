@@ -1,9 +1,12 @@
 ﻿# Yisoft.Crontab #
-cron expression parser for dotnet core.
+
+[![Build status](https://ci.appveyor.com/api/projects/status/mgms413qy8s0y181?svg=true)](https://ci.appveyor.com/project/yiteam/crontab)
+
+cron expression parser and executor for dotnet core.
 
 > this project based on [NCrontab-Advanced](https://github.com/jcoutch/NCrontab-Advanced).
 
-**If you have any problems, make sure to file an issue here on Github.**
+If you have any problems, make sure to file an issue here on Github.
 
 # Support for the following cron expressions #
 
