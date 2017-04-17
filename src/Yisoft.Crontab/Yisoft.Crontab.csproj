@@ -6,7 +6,7 @@
     <AssemblyTitle>Yisoft.Crontab</AssemblyTitle>
     <VersionPrefix>1.1.0</VersionPrefix>
     <Authors>ymind.chan@yi.team</Authors>
-    <TargetFrameworks>netstandard1.6;net46;net451;net45;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard1.6;net46</TargetFrameworks>
     <AssemblyName>Yisoft.Crontab</AssemblyName>
     <PackageId>Yisoft.Crontab</PackageId>
     <PackageTags>dotnet;crontab;cron;schedule;yisoft;yiteam</PackageTags>
@@ -21,5 +21,11 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Reflection.TypeExtensions">
+      <Version>4.3.0</Version>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
