@@ -61,7 +61,6 @@ namespace Yisoft.Crontab
 				occurrence = GetNextOccurrence(occurrence, endTime)) yield return occurrence;
 		}
 
-
 		private int Increment(IEnumerable<ITimeFilter> filters, int value, int defaultValue, out bool overflow)
 		{
 			var nextValue = filters.Select(x => x.Next(value)).Where(x => x > value).Min() ?? defaultValue;

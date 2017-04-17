@@ -1288,7 +1288,7 @@ namespace Yisoft.Crontab.UnitTests
 			Assert.AreEqual(nextTimeString, _TimeString(next), message);
 		}
 
-		private static void _CronFinite(string cronExpression, string startTimeString, string endTimeString,CronStringFormat format)
+		private static void _CronFinite(string cronExpression, string startTimeString, string endTimeString, CronStringFormat format)
 		{
 			var schedule = CrontabSchedule.Parse(cronExpression, format);
 			var occurrence = schedule.GetNextOccurrence(_Time(startTimeString), _Time(endTimeString));

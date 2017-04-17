@@ -8,7 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{506B9CDF-EED7-4D70-9B61-F07DDDB55D2C}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		License.txt = License.txt
+		LICENSE = LICENSE
 		NuGet.Config = NuGet.Config
 		README.md = README.md
 	EndProjectSection
@@ -18,6 +18,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C698C263-3412-4F65-8CF9-98CF9B31F0F1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yisoft.Crontab.UnitTests", "test\Yisoft.Crontab.UnitTests\Yisoft.Crontab.UnitTests.csproj", "{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{E031B909-90C6-4C57-9090-DC23571A6E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrontabSample.ConsoleApp", "sample\CrontabSample.ConsoleApp\CrontabSample.ConsoleApp.csproj", "{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrontabSample.ClassLibrary", "sample\CrontabSample.ClassLibrary\CrontabSample.ClassLibrary.csproj", "{45D97113-6306-40B9-8E24-B576F87D9C41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,14 @@ Global
 		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D97113-6306-40B9-8E24-B576F87D9C41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D97113-6306-40B9-8E24-B576F87D9C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D97113-6306-40B9-8E24-B576F87D9C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D97113-6306-40B9-8E24-B576F87D9C41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +54,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{476A1529-5AF8-4D12-BBDF-396BDD2D0651} = {B7A6F3B1-5A1F-481F-AF8D-E27BF73D5A49}
 		{3BEA7ED9-CB28-4428-99DE-FE31F7A4383F} = {C698C263-3412-4F65-8CF9-98CF9B31F0F1}
+		{276C9513-E53C-49B2-B6C5-FFD5DEEFB3FC} = {E031B909-90C6-4C57-9090-DC23571A6E9B}
+		{45D97113-6306-40B9-8E24-B576F87D9C41} = {E031B909-90C6-4C57-9090-DC23571A6E9B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		RESX_AutoCreateNewLanguageFiles = True
