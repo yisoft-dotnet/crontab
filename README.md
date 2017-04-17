@@ -52,7 +52,7 @@ The `CrontabTaskExecutor` class contains a constructor that with one parameter, 
 
 In console application, you can initialize an instance of an object with the `new` keyword or reflection. and in web application, you can use `DI`(`dependency injection`) directly.
 
-For better use this library in your Web application, see the [Yisoft.AspnetCore.Crontab](https://github.com/yisoft-aspnet/crontab) project.
+For better use this library in your Web application, see the [Yisoft.AspNetCore.Crontab](https://github.com/yisoft-aspnet/crontab) project.
 
 # Support for the following cron expressions #
 
@@ -66,6 +66,9 @@ Month        | 1-12 or JAN-DEC | * , - /
 Day of week  | 0-6 or SUN-SAT  | * , - / ? L #
 Year         | 0001–9999       | * , - /
 ```
+
+## Related community projects
+* [Yisoft.AspNetCore.Crontab](https://github.com/yisoft-aspnet/crontab)
 
 # License
 Released under the [Apache License](License.txt).
