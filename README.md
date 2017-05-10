@@ -1,6 +1,7 @@
 ﻿# Yisoft.Crontab #
 
 [![Build status](https://ci.appveyor.com/api/projects/status/mgms413qy8s0y181?svg=true)](https://ci.appveyor.com/project/yiteam/crontab)
+[![NuGet](https://img.shields.io/nuget/v/Yisoft.Crontab.svg?style=flat&label=nuget)](https://www.nuget.org/packages/Yisoft.Crontab/)
 
 cron expression parser and executor for dotnet core.
 
