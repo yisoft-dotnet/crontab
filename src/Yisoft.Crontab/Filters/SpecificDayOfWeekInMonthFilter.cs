@@ -33,11 +33,9 @@ namespace Yisoft.Crontab.Filters
 		/// <param name="kind">The crontab field kind to associate with this filter</param>
 		public SpecificDayOfWeekInMonthFilter(int dayOfWeek, int weekNumber, CrontabFieldKind kind)
 		{
-			if (weekNumber <= 0 || weekNumber > 5) throw new CrontabException(string.Format("Week number = {0} is out of bounds.", weekNumber));
+			if (weekNumber <= 0 || weekNumber > 5) throw new CrontabException($"Week number = {weekNumber} is out of bounds.");
 
-			if (kind != CrontabFieldKind.DayOfWeek)
-				throw new CrontabException(string.Format("<{0}#{1}> can only be used in the Day of Week field.", dayOfWeek,
-					weekNumber));
+			if (kind != CrontabFieldKind.DayOfWeek) throw new CrontabException($"<{dayOfWeek}#{weekNumber}> can only be used in the Day of Week field.");
 
 			DayOfWeek = dayOfWeek;
 			_dateTimeDayOfWeek = dayOfWeek.ToDayOfWeek();
@@ -80,6 +78,6 @@ namespace Yisoft.Crontab.Filters
 			return value.Day == currentDay.Day;
 		}
 
-		public override string ToString() { return string.Format("{0}#{1}", DayOfWeek, WeekNumber); }
+		public override string ToString() { return $"{DayOfWeek}#{WeekNumber}"; }
 	}
 }

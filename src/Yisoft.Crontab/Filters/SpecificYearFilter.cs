@@ -16,7 +16,7 @@
 namespace Yisoft.Crontab.Filters
 {
 	/// <summary>
-	///     Handles filtering for a specific value
+	/// Handles filtering for a specific value
 	/// </summary>
 	public class SpecificYearFilter : SpecificFilter
 	{

@@ -21,29 +21,35 @@ namespace CrontabSample.ClassLibrary.Schedulers
 {
 	public class TestScheduler
 	{
-		[Cron("18/1 * * * * ? *", CronStringFormat.WithSecondsAndYears)]
+		[Cron("18/1 * * * * ? *", format: CronStringFormat.WithSecondsAndYears)]
 		public static void Task1()
 		{
 			Debug.WriteLine($"Task..............1111_{DateTime.Now}");
 		}
 
-		[Cron("28/1 * * * * ? *", CronStringFormat.WithSecondsAndYears)]
+		[Cron("28/1 * * * * ? *", format: CronStringFormat.WithSecondsAndYears)]
 		public static void Task2(DateTime time, CrontabTask task)
 		{
 			Debug.WriteLine($"Task..............2222_{time}_{task.Method.Name}");
 		}
 
-		[Cron("28/1 * * * * ? *", CronStringFormat.WithSecondsAndYears)]
+		[Cron("28/1 * * * * ? *", format: CronStringFormat.WithSecondsAndYears)]
 		public static void Task3(DateTime time, CrontabTask task)
 		{
 			Debug.WriteLine($"Task..............3333_{time}_{task.Method.Name}");
 		}
 
-		[Cron("1-8 * * * * ? *", CronStringFormat.WithSecondsAndYears)]
-		[Cron("48/1 * * * * ? *", CronStringFormat.WithSecondsAndYears)]
+		[Cron("1-8 * * * * ? *", format: CronStringFormat.WithSecondsAndYears)]
+		[Cron("48/1 * * * * ? *", format: CronStringFormat.WithSecondsAndYears)]
 		public static void Task4(DateTime time, CrontabTask task, CrontabTaskExecutor taskExecutor)
 		{
 			Debug.WriteLine($"Task..............Cron_{time}_{task.Method.Name}_{taskExecutor.Tasks.Count}");
+		}
+
+		[Cron("0/1 * * * * *", 100, CronStringFormat.WithSeconds)]
+		public static void DeferTask1()
+		{
+			Debug.WriteLine($"Task..............5555_{DateTime.Now}");
 		}
 	}
 }
