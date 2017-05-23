@@ -16,27 +16,27 @@
 namespace Yisoft.Crontab
 {
 	/// <summary>
-	///     The cron string format to use during parsing
+	/// The cron string format to use during parsing
 	/// </summary>
 	public enum CronStringFormat
 	{
 		/// <summary>
-		///     Defined as "MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK"
+		/// Defined as "MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK"
 		/// </summary>
 		Default = 0,
 
 		/// <summary>
-		///     Defined as "MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK YEARS"
+		/// Defined as "MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK YEARS"
 		/// </summary>
 		WithYears = 1,
 
 		/// <summary>
-		///     Defined as "SECONDS MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK"
+		/// Defined as "SECONDS MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK"
 		/// </summary>
 		WithSeconds = 2,
 
 		/// <summary>
-		///     Defined as "SECONDS MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK YEARS"
+		/// Defined as "SECONDS MINUTES HOURS DAYS MONTHS DAYS-OF-WEEK YEARS"
 		/// </summary>
 		WithSecondsAndYears = 3
 	}

@@ -22,7 +22,7 @@ namespace Yisoft.Crontab
 		CrontabFieldKind Kind { get; }
 
 		/// <summary>
-		///     Checks if the value is accepted by the filter
+		/// Checks if the value is accepted by the filter
 		/// </summary>
 		/// <param name="value">The value to check</param>
 		/// <returns>True if the value matches the condition, False if it does not match.</returns>

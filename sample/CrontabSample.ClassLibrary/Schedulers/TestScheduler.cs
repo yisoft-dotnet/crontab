@@ -46,7 +46,7 @@ namespace CrontabSample.ClassLibrary.Schedulers
 			Debug.WriteLine($"Task..............Cron_{time}_{task.Method.Name}_{taskExecutor.Tasks.Count}");
 		}
 
-		[Cron("0/1 * * * * *", 100,  CronStringFormat.WithSeconds)]
+		[Cron("0/1 * * * * *", 100, CronStringFormat.WithSeconds)]
 		public static void DeferTask1()
 		{
 			Debug.WriteLine($"Task..............5555_{DateTime.Now}");
