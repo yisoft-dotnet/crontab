@@ -76,41 +76,52 @@ namespace Yisoft.Crontab
 		{
 			if (task == null) throw new ArgumentNullException(nameof(task));
 
-			var method = task.Method;
-			var typeInstance = _typeInstanceCreator(method);
+			var typeInstance = _typeInstanceCreator(task.Method);
 
 			return time =>
 			{
-				try
+				if (task.Cron.Defer > task.WaitingTime)
 				{
-					task.LastExecuteTime = time;
-					task.Status = CrontabTaskStatus.Running;
+					task.WaitingTime++;
 
-					switch (task.Parameters.Length)
-					{
-						case 0:
-							method.Invoke(typeInstance, null);
-							break;
-						case 1:
-							method.Invoke(typeInstance, new object[] {time});
-							break;
-						case 2:
-							method.Invoke(typeInstance, new object[] {time, task});
-							break;
-						case 3:
-							method.Invoke(typeInstance, new object[] {time, task, this});
-							break;
-						default:
-							throw new ArgumentException("the number of task parameters is incorrect.");
-					}
+					return;
 				}
-				catch (Exception e)
-				{
-					Console.WriteLine(e);
 
-					task.Status = CrontabTaskStatus.Failing;
-				}
+				_TryRun(time, task, typeInstance);
 			};
+		}
+
+		private void _TryRun(DateTime time, CrontabTask task, object typeInstance)
+		{
+			var method = task.Method;
+
+			task.LastExecuteTime = time;
+			task.Status = CrontabTaskStatus.Running;
+
+			try
+			{
+				switch (task.Parameters.Length)
+				{
+					case 0:
+						method.Invoke(typeInstance, null);
+						break;
+					case 1:
+						method.Invoke(typeInstance, new object[] {time});
+						break;
+					case 2:
+						method.Invoke(typeInstance, new object[] {time, task});
+						break;
+					case 3:
+						method.Invoke(typeInstance, new object[] {time, task, this});
+						break;
+					default:
+						throw new ArgumentException("the number of task parameters is incorrect.");
+				}
+			}
+			catch
+			{
+				task.Status = CrontabTaskStatus.Failing;
+			}
 		}
 	}
 }

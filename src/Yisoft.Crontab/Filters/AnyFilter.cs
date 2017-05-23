@@ -18,7 +18,7 @@ using System;
 namespace Yisoft.Crontab.Filters
 {
 	/// <summary>
-	///     Handles the filter instance where the user specifies a * (for any value)
+	/// Handles the filter instance where the user specifies a * (for any value)
 	/// </summary>
 	public class AnyFilter : ICronFilter, ITimeFilter
 	{

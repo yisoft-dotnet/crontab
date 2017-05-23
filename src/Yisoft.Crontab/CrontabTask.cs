@@ -42,6 +42,8 @@ namespace Yisoft.Crontab
 
 		internal Action<DateTime> Action { get; set; }
 
+		internal int WaitingTime { get; set; }
+
 		public CrontabTaskStatus Status { get; set; } = CrontabTaskStatus.Pending;
 
 		public DateTime LastExecuteTime { get; set; } = DateTime.MinValue;

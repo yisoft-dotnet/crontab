@@ -304,8 +304,7 @@ namespace Yisoft.Crontab
 			catch (Exception e)
 			{
 				throw new CrontabException(
-					string.Format("There was an error parsing '{0}' for the {1} field", field,
-						Enum.GetName(typeof(CrontabFieldKind), kind)), e);
+					$"There was an error parsing '{field}' for the {Enum.GetName(typeof(CrontabFieldKind), kind)} field", e);
 			}
 		}
 
@@ -426,8 +425,7 @@ namespace Yisoft.Crontab
 				var returnValue = value;
 
 				if (returnValue > maxValue)
-					throw new CrontabException(string.Format("Value for {0} filter exceeded maximum value of {1}",
-						Enum.GetName(typeof(CrontabFieldKind), kind), maxValue));
+					throw new CrontabException($"Value for {Enum.GetName(typeof(CrontabFieldKind), kind)} filter exceeded maximum value of {maxValue}");
 
 				return returnValue;
 			}
@@ -458,8 +456,7 @@ namespace Yisoft.Crontab
 				var returnValue = replaceVal.First().Value;
 
 				if (returnValue > maxValue)
-					throw new CrontabException(string.Format("Value for {0} filter exceeded maximum value of {1}",
-						Enum.GetName(typeof(CrontabFieldKind), kind), maxValue));
+					throw new CrontabException($"Value for {Enum.GetName(typeof(CrontabFieldKind), kind)} filter exceeded maximum value of {maxValue}");
 
 				return returnValue;
 			}

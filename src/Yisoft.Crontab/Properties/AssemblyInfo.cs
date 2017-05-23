@@ -25,7 +25,7 @@ using System.Runtime.InteropServices;
 [assembly: NeutralResourcesLanguage("en-us")]
 [assembly: AssemblyCompany("Yi Team")]
 [assembly: AssemblyCopyright("Copyright © Yi.TEAM. All rights reserved.")]
-[assembly: AssemblyProduct("Yisoft.Framework.Caching")]
+[assembly: AssemblyProduct("Yisoft.Crontab")]
 [assembly: AssemblyTrademark("Yi.TEAM")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -36,4 +36,4 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("690b7192-e24d-4ea6-8d03-eaf1a636c241")]
+[assembly: Guid("f8fec47e-d03a-498f-b925-fac9673f0bea")]

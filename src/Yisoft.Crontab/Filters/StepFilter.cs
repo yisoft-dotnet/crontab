@@ -39,9 +39,7 @@ namespace Yisoft.Crontab.Filters
 		{
 			var maxValue = Constants.MaximumDateTimeValues[kind];
 
-			if (step <= 0 || step > maxValue)
-				throw new CrontabException(string.Format("Steps = {0} is out of bounds for <{1}> field", step,
-					Enum.GetName(typeof(CrontabFieldKind), kind)));
+			if (step <= 0 || step > maxValue) throw new CrontabException($"Steps = {step} is out of bounds for <{Enum.GetName(typeof(CrontabFieldKind), kind)}> field");
 
 			Start = start;
 			Step = step;
@@ -134,11 +132,7 @@ namespace Yisoft.Crontab.Filters
 
 			while (newValue < max && !_IsMatch(newValue)) newValue++;
 
-			if (newValue > max)
-				throw new CrontabException(string.Format("Next value for {0} on field {1} could not be found!",
-					ToString(),
-					Enum.GetName(typeof(CrontabFieldKind), Kind))
-				);
+			if (newValue > max) throw new CrontabException($"Next value for {ToString()} on field {Enum.GetName(typeof(CrontabFieldKind), Kind)} could not be found!");
 
 			_firstCache = newValue;
 
@@ -147,6 +141,6 @@ namespace Yisoft.Crontab.Filters
 
 		private bool _IsMatch(int evalValue) { return evalValue >= Start && (evalValue - Start) % Step == 0; }
 
-		public override string ToString() { return string.Format("{0}/{1}", Start == 0 ? "*" : Start.ToString(), Step); }
+		public override string ToString() { return $"{(Start == 0 ? "*" : Start.ToString())}/{Step}"; }
 	}
 }
