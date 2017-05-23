@@ -81,6 +81,13 @@ namespace Yisoft.Crontab
 
 			return time =>
 			{
+				if (task.Cron.Defer > task.WaitingTime)
+				{
+					task.WaitingTime++;
+
+					return;
+				}
+
 				try
 				{
 					task.LastExecuteTime = time;
@@ -104,10 +111,8 @@ namespace Yisoft.Crontab
 							throw new ArgumentException("the number of task parameters is incorrect.");
 					}
 				}
-				catch (Exception e)
+				catch
 				{
-					Console.WriteLine(e);
-
 					task.Status = CrontabTaskStatus.Failing;
 				}
 			};

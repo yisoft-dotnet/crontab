@@ -20,14 +20,17 @@ namespace Yisoft.Crontab
 	[AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 	public class CronAttribute : Attribute
 	{
-		public CronAttribute(string expression, CronStringFormat format = CronStringFormat.Default)
+		public CronAttribute(string expression, int defer = 0, CronStringFormat format = CronStringFormat.Default)
 		{
 			Expression = expression ?? throw new ArgumentNullException(nameof(expression));
+			Defer = defer;
 			Format = format;
 		}
 
 		public string Expression { get; }
 
 		public CronStringFormat Format { get; }
+
+		public int Defer { get; }
 	}
 }
