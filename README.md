@@ -44,6 +44,13 @@ public class TestScheduler
 	{
 		Debug.WriteLine($"Task..............Cron_{time}_{task.Method.Name}_{taskExecutor.Tasks.Count}");
 	}
+
+	// this task will begin execution after 100 seconds of startup
+	[Cron("0/1 * * * * *", 100, CronStringFormat.WithSeconds)]
+	public static void DeferTask1()
+	{
+		Debug.WriteLine($"Task..............5555_{DateTime.Now}");
+	}
 }
 ```
 
