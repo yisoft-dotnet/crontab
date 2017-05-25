@@ -37,6 +37,13 @@ namespace Yisoft.Crontab
 
 				foreach (var task in _cronTasks)
 				{
+					if (task.Cron.Defer > task.WaitingTime)
+					{
+						task.WaitingTime++;
+
+						continue;
+					}
+
 					if (!task.Schedule.IsMatch(now)) continue;
 
 					task.Action(now);
@@ -78,17 +85,7 @@ namespace Yisoft.Crontab
 
 			var typeInstance = _typeInstanceCreator(task.Method);
 
-			return time =>
-			{
-				if (task.Cron.Defer > task.WaitingTime)
-				{
-					task.WaitingTime++;
-
-					return;
-				}
-
-				_TryRun(time, task, typeInstance);
-			};
+			return time => { _TryRun(time, task, typeInstance); };
 		}
 
 		private void _TryRun(DateTime time, CrontabTask task, object typeInstance)
